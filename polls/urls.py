@@ -12,5 +12,7 @@ urlpatterns = [
     path('polls/<int:pk>/choices/<int:choice_pk>/vote/',
          CreateVote.as_view(), name='vote_create'),
     path('choices/<int:pk>/', ChoiceDetail.as_view(), name='choice_detail'),
+    path('users/', UserCreate.as_view(), name='user_create'),
+    path('login/', LoginView.as_view(), name='login'),
 ]
 urlpatterns += router.urls
